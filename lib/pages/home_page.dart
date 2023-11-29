@@ -6,6 +6,7 @@ import 'package:cocktails_app/model/ingredient_item.dart';
 import 'package:cocktails_app/pages/cocktail_page.dart';
 import 'package:cocktails_app/pages/generate_cocktail_page.dart';
 import 'package:cocktails_app/pages/settings_page.dart';
+import 'package:cocktails_app/pages/show_screen.dart';
 import 'package:cocktails_app/widget/cocktail_widget.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
@@ -347,8 +348,13 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   InkWell(
                                     onTap: () {
-                                      // page = EPageOnSelect.policyPage;
-                                      // setState(() {});
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute<void>(
+                                            builder: (BuildContext context) =>
+                                                const ReadTermsOrPrivacyScreenView(
+                                                  link: 'google.com',
+                                                )),
+                                      );
                                     },
                                     child: Container(
                                       padding: const EdgeInsets.only(
@@ -374,8 +380,13 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   InkWell(
                                     onTap: () {
-                                      // page = EPageOnSelect.termsPage;
-                                      // setState(() {});
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute<void>(
+                                            builder: (BuildContext context) =>
+                                                const ReadTermsOrPrivacyScreenView(
+                                                  link: 'google.com',
+                                                )),
+                                      );
                                     },
                                     child: Container(
                                       padding: const EdgeInsets.only(
